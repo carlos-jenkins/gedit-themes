@@ -1,5 +1,9 @@
 #!/bin/sh
 set -v
 
-mkdir -p $HOME/.gnome2/gedit/styles
-cp ./*.xml $HOME/.gnome2/gedit/styles/.
+INSTALL_DIR=~/.local/share/gtksourceview-3.0/styles/
+
+echo "Installing to $INSTALL_DIR"
+mkdir -p $INSTALL_DIR
+cp ./*.xml $INSTALL_DIR
+echo "[DONE]"
